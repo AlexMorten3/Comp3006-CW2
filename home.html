@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="server.js"></script>
+
+</head>
+    
+<body>
+
+
+    <div class="topnav">
+        <a class="active">Home</a>
+        <a href="account.html">My Account</a>
+    </div>
+
+
+    <div style="padding-left:16px">
+        <h1>Featured:</h1>
+    </div>
+    
+
+    <div class="movie-container">
+        
+        <div class="movie-poster">
+            <h3>The Godfather</h3>
+            <img src="Posters/movie1.jpg" alt="The Godfather" width="150" height="225">
+            <button onclick="bookMovie()">Book</button>
+        </div>
+
+        <div class="movie-poster">
+            <h3>Gladiator</h3>
+            <img src="Posters/movie2.jpg" alt="Gladiator" width="150" height="225">
+            <button href="movie3.html">Book</button>
+        </div>
+        
+        <div class="movie-poster">
+            <h3>Alien</h3>
+            <img src="Posters/movie3.jpg" alt="Alien" width="150" height="225">
+            <button onclick="bookMovie()" href="movie3.html">Book</button>
+        </div>
+        
+        <div class="movie-poster">
+            <h3>Saving Private Ryan</h3>
+            <img src="Posters/movie4.jpg" alt="Saving Private Ryan" width="150" height="225">
+            <button onclick="bookMovie()" href="movie4.html">Book</button>
+        </div>
+
+    </div>
+    
+    <div class="quickBook">
+        <div id="quickBooker">
+            <h2>Quick book</h2>
+
+            <form>
+                <label for="movieName">Movie Name:</label>
+                <select id="movieTitle" name="movieList" required>
+                    <option value="1">-</option>
+                    <option value="2">The Godfather</option>
+                    <option value="3">Gladiator</option>
+                    <option value="4">Alien</option>
+                    <option value="5">Saving Private Ryan</option>
+                </select>
+                <br>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="ticketCount">Number of Tickets:</label>
+                <select id="ticketCount" name="ticketCount" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button type="button" onclick="bookTicket()">Book</button>
+            </form>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>

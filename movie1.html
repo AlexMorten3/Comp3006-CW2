@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script rel="script" href="app.js"></script>
+
+</head>
+    
+<body>
+
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="account.html">My Account</a>
+    </div>
+
+
+    <div style="padding-left:16px">
+        <h1>The Godfather</h1>
+    </div>
+    
+    <div id="pageRow">
+
+        <img src="Posters/movie1.jpg" alt="The Godfather" width="300" height="450">
+
+        <div id="movieInfoPanel">
+            <div id="subPanel">
+                <h2>Info:</h2>
+                <br>
+                <p>Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. 
+                However, his decision unintentionally puts the lives of his loved ones in grave danger.</p>
+                <br>
+                <p>Director: Francis Ford Coppola</p>
+                <br>
+                <p>Starring: Al Pacino, Marlon Brando, Robert Duvall</p>
+            </div>
+            <div id="subPanel">
+                <h2>Showing times:</h2>
+                
+
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Showing Time</th>
+                    </tr>
+                    <tr>
+                        <td>Monday, January 1st</td>
+                        <td>7:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday, January 2nd</td>
+                        <td>6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday, January 3rd</td>
+                        <td>2:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday, January 4rd</td>
+                        <td>8:45 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday, January 5rd</td>
+                        <td>7:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday, January 6rd</td>
+                        <td>4:00 PM</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class=bookingbox>
+            <div id="booking-box">
+                <h2>Book ticket</h2>
+                <form>
+                    <label for="movieName">Movie Name: The Godfather</label>
+                    <br>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="date">Time:</label>
+                    <input type="time" id="time" name="time" required>
+
+                    <label for="ticketCount">Number of Tickets:</label>
+                    <select id="ticketCount" name="ticketCount" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <button type="button" onclick="bookTicket()">Book</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

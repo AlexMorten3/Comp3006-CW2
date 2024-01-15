@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="register.js"></script>
+
+</head>
+    
+<body>
+
+    <div class="topnav">
+        <a class="active">Register</a>
+    </div>
+    
+    <div class=bookingbox>
+        <div id="booking-box">
+            <h2>Register</h2>
+
+            <form onSubmit={handleRegister}>
+                
+                <label for="userNameEntry">User Name:</label>
+                <input type="text" name="userNameEntry" placeholder="Username"/>
+
+                <label for="passwordEntry1">Password:</label>
+                <input type='password' name="passwordEntry1" placeholder="Password"/>
+
+                <label for="passwordEntry2">Confirm Password:</label>
+                <input type='password' name="passwordEntry2" placeholder="Repeat Password"/>
+
+                <br/>
+
+                <button type="submit" className="btn" onclick="createNewUser()">Register</button>
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+
+
+
+
+<script>
+    async function createNewUser() {
+      const username = document.getElementById('newUserLogin').value;
+      const password = document.getElementById('newUserPassword2').value;
+
+      try {
+        const response = await fetch('/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password }),
+        });
+
+        if (response.ok) {
+          alert('User added successfully!');
+        } else {
+          alert('Error adding user');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+</script>
+
+</html>
